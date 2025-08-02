@@ -1,38 +1,29 @@
-# IR-Sensor-Based-Vehicle-Speed-Detection
-Detects vehicle speed using two IR sensors. Displays "NORMAL" or "OVERSPEED" on an I2C LCD and activates a buzzer if the speed exceeds a set threshold. Useful for traffic monitoring and speed control systems.
+🚗 IR-Based Speed Analyzer with STM32  
+**Short Description:** Detects and displays vehicle speed violations using two IR sensors.
 
-Project: IR Sensor-Based Vehicle Speed Detection
+### Description:
+This project is built with STM32 and uses two IR sensors to detect vehicle speed based on time difference between sensor triggers. If a vehicle crosses the threshold speed (based on a time difference < 5s), an alert is displayed, and a buzzer is triggered.
 
-### 🔧 Platform
-- **Microcontroller:** STM32F446RE (Nucleo-64)
-
-### 📂 File
-- Above Uploaded
-
-### 📝 Description
-Measures vehicle speed using two IR sensors and identifies overspeed violations. Displays results on an I2C LCD and triggers a buzzer when a violation is detected.
-
-### 🔌 Pin Configuration
-| Component        | Pin (STM32F446RE) | Description          |
-|------------------|------------------|----------------------|
-| IR Sensor 1      | PA8              | Detect vehicle entry |
-| IR Sensor 2      | PB5              | Detect vehicle exit  |
-| I2C LCD SDA      | PB9              | I2C Data             |
-| I2C LCD SCL      | PB8              | I2C Clock            |
-| Buzzer           | PC13             | Alert output         |
-| LED (optional)   | PC0              | Overspeed indicator  |
-
-### 💡 Logic
-- Start timer when IR1 detects vehicle.
-- Stop timer when IR2 detects.
-- If time < 5s → Overspeed.
-- Display result and sound buzzer if overspeed.
-
-### 🛠️ Components
-- STM32F446RE
+### Components:
+- STM32F103 (Blue Pill)
 - 2x IR Sensors
 - I2C 16x2 LCD
 - Buzzer
-- Wires, Breadboard
+- LED
+
+### Pin Configuration:
+| Component | STM32 Pin |
+|----------|------------|
+| IR Sensor 1 | PA8 |
+| IR Sensor 2 | PB5 |
+| Buzzer | PC1 |
+| Speed Alert LED | PA5 |
+| LCD I2C | I2C1 (PB6 - SDA, PB7 - SCL) |
+
+### Features:
+- Counts vehicles and overspeed incidents
+- Displays speed status and counters on LCD
+- Buzzer alert on overspeed
+- Real-time LCD scroll for system title
 
 ---
