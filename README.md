@@ -7,7 +7,7 @@ Project: IR Sensor-Based Vehicle Speed Detection
 - **Microcontroller:** STM32F446RE (Nucleo-64)
 
 ### 📂 File
-- [`main.c`](./ir-speed-detection/main.c)
+- Above Uploaded
 
 ### 📝 Description
 Measures vehicle speed using two IR sensors and identifies overspeed violations. Displays results on an I2C LCD and triggers a buzzer when a violation is detected.
